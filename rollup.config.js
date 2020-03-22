@@ -14,7 +14,11 @@ module.exports = {
   plugins: [
     copy({
       targets: [
-        { src: "src/hyperapp/HyperappUtil.js", dest: "lib/es6/src/hyperapp/" }
+        {
+          src: "src/hyperapp/HyperappUtil.js",
+          dest: "lib/es6/src/Hyperapp",
+          rename: "HyperappUtil.bs.js"
+        }
       ]
     }),
     resolve(),

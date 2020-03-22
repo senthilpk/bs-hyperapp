@@ -5,7 +5,7 @@
  *       [effect1,effect2,payload]
  *
  */
-[@bs.module "./HyperappUtil.js"]
+[@bs.module "./HyperappUtil.bs.js"]
 external effects_payload: ('payload, array('effect)) => 'effectwithpayload =
   "flatten";
 /**

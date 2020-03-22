@@ -3,11 +3,9 @@ public
 node_modules/
 .merlin
 .bsb.lock
-lib/*
 !lib/es6
-lib/e6/*
-!lib/es6/src
 !__snapshots__
 coverage
 .coveralls.yml
 .DS_Store
+lib/bs
