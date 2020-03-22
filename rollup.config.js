@@ -15,9 +15,8 @@ module.exports = {
     copy({
       targets: [
         {
-          src: "src/hyperapp/HyperappUtil.js",
-          dest: "lib/es6/src/Hyperapp",
-          rename: "HyperappUtil.bs.js"
+          src: "src/hyperapp/HyperappUtil.bs.js",
+          dest: "lib/es6/src/Hyperapp"
         }
       ]
     }),
