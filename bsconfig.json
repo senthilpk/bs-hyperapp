@@ -6,7 +6,8 @@
   "sources": [
     {
       "dir": "src",
-      "subdirs": true
+      "subdirs": true,
+      "public": "all"
     },
     {
       "dir": "__tests__",
@@ -21,6 +22,6 @@
   "warnings": {
     "error": "+101"
   },
-  "namespace": true,
+  "namespace": "Hyperapp",
   "refmt": 3
 }
