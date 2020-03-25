@@ -1,5 +1,6 @@
 //representation of dom
 type t;
+type props;
 
 // getElementById
 [@bs.val] [@bs.scope "document"]
@@ -992,7 +993,5 @@ type domProps('state, 'payload) = {
  * when custom attributes like data-* passed and
  * named parameters cannot be passed as we dont know before hand
  */
-external makePropsFromJS: Js.t({..}) => domProps('state, 'payload) =
-  "%identity";
-let makePropsFromJS = makePropsFromJS;
-let makeProps = domProps;
+external makePropsFromJS: Js.t({..}) => props = "%identity";
+let makeProps = makePropsFromJS;

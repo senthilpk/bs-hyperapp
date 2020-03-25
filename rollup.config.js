@@ -1,5 +1,6 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
+import serve from "rollup-plugin-serve";
 
 module.exports = {
   input: "lib/es6/src/examples/Index.bs.js",
@@ -10,5 +11,5 @@ module.exports = {
     name: "bsHyperApp",
     exports: "named"
   },
-  plugins: [resolve(), commonjs()]
+  plugins: [resolve(), commonjs(), serve("public")]
 };

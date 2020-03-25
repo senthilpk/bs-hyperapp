@@ -52,30 +52,33 @@ let actionHandler = _ => {
   ageIncrement();
   anotherLocalState##getState();
 };
+type indexPageState = domProps(person, Dom.element);
 
 // Props and Handler
-let propsAndHandlers =
-  makeProps(
-    ~onClick=(
-      (_: person, _) => {
-        batchEffects(
-          ~payload=anotherLocalState##getState(),
-          ~effects=[|customEffect({"action": actionHandler})|],
-        );
-      },
-      withId(506),
-    ),
-    (),
-  );
+let propsAndHandlers = {
+  "onClick": (
+    (_: person, _: Dom.element) => {
+      batchEffects(
+        ~payload=anotherLocalState##getState(),
+        ~effects=[|customEffect({"action": actionHandler})|],
+      );
+    },
+    withId(506),
+  ),
+};
 
 let children = props => {
-  h("div", makeProps(), [|str_to_element(props.name)|]);
+  h(
+    "div",
+    HyperappDom.makePropsFromJS(Js.Obj.empty()),
+    [|str_to_element(props.name)|],
+  );
 };
 
 let div = props => {
   h(
     "div",
-    propsAndHandlers,
+    makeProps(propsAndHandlers),
     [|str_to_element(string_of_int(props.age)), children(props)|],
   );
 };

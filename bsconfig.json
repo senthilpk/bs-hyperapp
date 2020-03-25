@@ -7,7 +7,7 @@
     {
       "dir": "src",
       "subdirs": true,
-      "public": "all"
+      "public": ["Hyperapp"]
     },
     {
       "dir": "__tests__",

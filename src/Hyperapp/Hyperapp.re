@@ -4,3 +4,4 @@ module DomLike = HyperappDom;
 module Effector = Effector;
 module Effectx = HyperappEffects;
 module Subscriptions = HyperappSubscriptions;
+module Action = HyperappAction;

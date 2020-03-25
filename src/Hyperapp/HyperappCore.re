@@ -3,12 +3,7 @@
  */
 [@bs.module "hyperapp"]
 external h:
-  (
-    string,
-    HyperappDom.domProps('state, 'payload),
-    array(HyperappElement.t)
-  ) =>
-  HyperappElement.t =
+  (string, HyperappDom.props, array(HyperappElement.t)) => HyperappElement.t =
   "h";
 /**
  * Types for subscription and view
