@@ -52,7 +52,6 @@ let actionHandler = _ => {
   ageIncrement();
   anotherLocalState##getState();
 };
-type indexPageState = domProps(person, Dom.element);
 
 // Props and Handler
 let propsAndHandlers = {

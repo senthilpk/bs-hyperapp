@@ -1,5 +1,6 @@
 //representation of dom
 type props;
+type t;
 
 // getElementById
 [@bs.val] [@bs.scope "document"]
